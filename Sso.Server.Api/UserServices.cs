@@ -14,17 +14,22 @@ namespace Sso.Server.Api
         public async Task<User> Auth(string userName, string password)
         {
          
-            var user = new User();
-            
-            //var userAdmin = Config.GetUsers()
-            //    .Where(_ => _.Username == userName)
-            //    .Where(_ => _.Password == password)
-            //    .SingleOrDefault();
+            // return await Task.Run(() =>
+            // {
+                // var user = new User();
 
-            //if (userAdmin.IsNotNull())
-            //    user = userAdmin;
+                // var userAdmin = Config.GetUsers()
+                    // .Where(_ => _.Username == userName)
+                    // .Where(_ => _.Password == password)
+                    // .SingleOrDefault();
 
-            return user;
+                // if (userAdmin.IsNotNull())
+                    // user = userAdmin;
+
+                // return user;
+            // });
+			
+			return new User();
         }
 
     }
