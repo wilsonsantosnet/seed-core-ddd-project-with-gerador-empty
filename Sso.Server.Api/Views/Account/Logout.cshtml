@@ -1,4 +1,4 @@
-﻿@model LogoutViewModel
+@model LogoutViewModel
 
 <div class="logout-page">
     <div class="page-header">
@@ -7,15 +7,24 @@
 
     <div class="row">
         <div class="col-sm-6">
-            <p>Would you like to logout of IdentityServer?</p>
+            <p>Deseja sair do sistema?</p>
             <form asp-action="Logout">
-                <input type="hidden" name="logoutId" value="@Model.LogoutId"  />
+                <input type="hidden" name="logoutId" value="@Model.LogoutId" />
+                <input type="hidden" name="ReturnUrl" value="@Model.ReturnUrl" />
                 <fieldset>
                     <div class="form-group">
-                        <button class="btn btn-primary">Yes</button>
+                        <button class="btn btn-primary">Sim</button>
+                        <button class="btn btn-danger" id="logout-cancel">Não</button>
                     </div>
                 </fieldset>
             </form>
+
+
         </div>
     </div>
 </div>
+
+@section scripts
+{
+    <script src="~/js/logout-back.js"></script>
+}
