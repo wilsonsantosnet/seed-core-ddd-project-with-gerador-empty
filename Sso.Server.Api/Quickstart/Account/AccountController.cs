@@ -250,9 +250,10 @@ namespace IdentityServer4.Quickstart.UI
         /// Show logout page
         /// </summary>
         [HttpGet]
-        public async Task<IActionResult> Logout(string logoutId)
+        public async Task<IActionResult> Logout(string logoutId, string returnUrl)
         {
             var vm = await _account.BuildLogoutViewModelAsync(logoutId);
+            vm.ReturnUrl = returnUrl;
 
             if (vm.ShowLogoutPrompt == false)
             {
