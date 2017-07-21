@@ -50,7 +50,7 @@ namespace Sso.Server.Api
                 //.AddTemporarySigningCredential()
                 //.AddInMemoryApiResources(Config.GetApiResources())
                 //.AddInMemoryIdentityResources(Config.GetIdentityResources())
-                //.AddInMemoryClients(Config.GetClients());
+                //.AddInMemoryClients(Config.GetClients(Configuration.GetSection("ConfigSettings").Get<ConfigSettingsBase>()));
           
             //for clarity of the next piece of code
             services.AddScoped<CurrentUser>();
