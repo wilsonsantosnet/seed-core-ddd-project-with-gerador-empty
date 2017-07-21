@@ -18,7 +18,7 @@ namespace Cna.Erp.Gen
 
         public override HelperSysObjectsBase DefineFrontTemplateClass(Context config)
         {
-            return new HelperSysObjectsAngularJs(config);
+            return new HelperSysObjectsAngular20(config);
         }
 
     }
