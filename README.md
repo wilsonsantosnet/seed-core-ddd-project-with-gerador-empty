@@ -3,7 +3,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 1-) Clonar Esse Rep
 
-2-) rodar npm sntall
+2-) rodar npm install
 
 3-) abrir solution seed.sln
 
