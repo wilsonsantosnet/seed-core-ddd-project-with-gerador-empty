@@ -11,4 +11,4 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 5-) Clicar com botão direito no projeto de gerador e rodar em debug
 
-6-) esciolher a opção 1 (clonar e copiar para aplicação)
+6-) escolher a opção 1 (clonar e copiar para aplicação)
