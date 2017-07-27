@@ -48,5 +48,5 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 18-) caso não tenha angular intalado npm install -g @angular/cli
 
-19-) ng serve --open
+19-) entra na pasta Seed.Spa.Ui e rodar no prompt de comando ng serve --open
 
