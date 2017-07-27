@@ -76,6 +76,117 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Templates\Back\api" />
+    <None Include="Templates\Back\api.currentUser" />
+    <None Include="Templates\Back\api.download" />
+    <None Include="Templates\Back\api.get" />
+    <None Include="Templates\Back\api.health" />
+    <None Include="Templates\Back\api.more" />
+    <None Include="Templates\Back\api.start" />
+    <None Include="Templates\Back\api.upload" />
+    <None Include="Templates\Back\appsettings.json" />
+    <None Include="Templates\Back\automapper" />
+    <None Include="Templates\Back\ConfigSettingsDomain" />
+    <None Include="Templates\Back\container" />
+    <None Include="Templates\Back\container.injections" />
+    <None Include="Templates\Back\container.partial" />
+    <None Include="Templates\Back\Context" />
+    <None Include="Templates\Back\context.mappers" />
+    <None Include="Templates\Back\dto" />
+    <None Include="Templates\Back\dto.nav.property.Collection" />
+    <None Include="Templates\Back\dto.nav.property.Instance" />
+    <None Include="Templates\Back\dto.specialized" />
+    <None Include="Templates\Back\dto.specialized.details" />
+    <None Include="Templates\Back\dto.specialized.report" />
+    <None Include="Templates\Back\dto.specialized.result" />
+    <None Include="Templates\Back\EntityApplicationService" />
+    <None Include="Templates\Back\EntityApplicationServiceBase" />
+    <None Include="Templates\Back\EntityBase" />
+    <None Include="Templates\Back\EntityExt" />
+    <None Include="Templates\Back\EntityFilterBasicExtension" />
+    <None Include="Templates\Back\EntityFilterCustomExtension" />
+    <None Include="Templates\Back\EntityMapBase" />
+    <None Include="Templates\Back\EntityMapExt" />
+    <None Include="Templates\Back\EntityMethodSeters" />
+    <None Include="Templates\Back\EntityOrderCustomExtension" />
+    <None Include="Templates\Back\EntityPropertys" />
+    <None Include="Templates\Back\EntityRepository" />
+    <None Include="Templates\Back\EntityServiceBase" />
+    <None Include="Templates\Back\EntityServiceExt" />
+    <None Include="Templates\Back\EntityValidatorSpecification" />
+    <None Include="Templates\Back\EntityValidatorSpecificationRepository" />
+    <None Include="Templates\Back\EntityWarningSpecification" />
+    <None Include="Templates\Back\Filter" />
+    <None Include="Templates\Back\Filter.partial" />
+    <None Include="Templates\Back\FilterBasicExtension" />
+    <None Include="Templates\Back\IEntityApplicationService" />
+    <None Include="Templates\Back\IEntityRepository" />
+    <None Include="Templates\Back\IEntityService" />
+    <None Include="Templates\Back\maps.compositekey" />
+    <None Include="Templates\Back\maps.length" />
+    <None Include="Templates\Back\maps.manytomany" />
+    <None Include="Templates\Back\maps.mapper" />
+    <None Include="Templates\Back\maps.onetomany" />
+    <None Include="Templates\Back\maps.OneToOne" />
+    <None Include="Templates\Back\maps.required" />
+    <None Include="Templates\Back\models.property" />
+    <None Include="Templates\Back\models.validation.length" />
+    <None Include="Templates\Back\models.validation.property" />
+    <None Include="Templates\Back\models.validation.required" />
+    <None Include="Templates\Back\profile" />
+    <None Include="Templates\Back\profile.registers" />
+    <None Include="Templates\Back\profile.registers.specilize" />
+    <None Include="Templates\Back\profile.registers.specilize.details" />
+    <None Include="Templates\Back\profile.registers.specilize.report" />
+    <None Include="Templates\Back\profile.registers.specilize.result" />
+    <None Include="Templates\Back\profileCustom" />
+    <None Include="Templates\Back\README.md" />
+    <None Include="Templates\Back\sso.configauth" />
+    <None Include="Templates\Back\summary" />
+    <None Include="Templates\FrontV4\app.routing.custom.ts.tpl" />
+    <None Include="Templates\FrontV4\app.routing.item.print.ts.tpl" />
+    <None Include="Templates\FrontV4\app.routing.item.ts.tpl" />
+    <None Include="Templates\FrontV4\app.routing.ts.tpl" />
+    <None Include="Templates\FrontV4\component.css.tpl" />
+    <None Include="Templates\FrontV4\component.html.tpl" />
+    <None Include="Templates\FrontV4\component.module.ts.tpl" />
+    <None Include="Templates\FrontV4\component.routing.module.ts.tpl" />
+    <None Include="Templates\FrontV4\component.service.fields.info.ts.tpl" />
+    <None Include="Templates\FrontV4\component.service.fields.required.ts.tpl" />
+    <None Include="Templates\FrontV4\component.service.fields.ts.tpl" />
+    <None Include="Templates\FrontV4\component.service.ts.tpl" />
+    <None Include="Templates\FrontV4\component.table.body.html.tpl" />
+    <None Include="Templates\FrontV4\component.table.head.html.tpl" />
+    <None Include="Templates\FrontV4\component.ts.tpl" />
+    <None Include="Templates\FrontV4\create-component.css.tpl" />
+    <None Include="Templates\FrontV4\create-component.html.tpl" />
+    <None Include="Templates\FrontV4\create-component.ts.tpl" />
+    <None Include="Templates\FrontV4\detail-component.css.tpl" />
+    <None Include="Templates\FrontV4\detail-component.html.tpl" />
+    <None Include="Templates\FrontV4\detail-component.section.html.tpl" />
+    <None Include="Templates\FrontV4\detail-component.ts.tpl" />
+    <None Include="Templates\FrontV4\edit-component.css.tpl" />
+    <None Include="Templates\FrontV4\edit-component.html.tpl" />
+    <None Include="Templates\FrontV4\edit-component.ts.tpl" />
+    <None Include="Templates\FrontV4\entity.viewmodel.item.ts.tpl" />
+    <None Include="Templates\FrontV4\entity.viewmodel.ts.tpl" />
+    <None Include="Templates\FrontV4\field-component.css.tpl" />
+    <None Include="Templates\FrontV4\field-component.html.tpl" />
+    <None Include="Templates\FrontV4\field-component.section.html.tpl" />
+    <None Include="Templates\FrontV4\field-create-component.ts.tpl" />
+    <None Include="Templates\FrontV4\field-edit-component.ts.tpl" />
+    <None Include="Templates\FrontV4\field-makeselect-on-change.tpl" />
+    <None Include="Templates\FrontV4\filter-component.css.tpl" />
+    <None Include="Templates\FrontV4\filter-component.html.tpl" />
+    <None Include="Templates\FrontV4\filter-component.section.html.tpl" />
+    <None Include="Templates\FrontV4\filter-component.ts.tpl" />
+    <None Include="Templates\FrontV4\filter-makeselect-on-change.tpl" />
+    <None Include="Templates\FrontV4\print-component.css.tpl" />
+    <None Include="Templates\FrontV4\print-component.html.tpl" />
+    <None Include="Templates\FrontV4\print-component.ts.tpl" />
+    <None Include="Templates\FrontV4\print-routing.module.ts.tpl" />
+    <None Include="Templates\FrontV4\print.module.ts.tpl" />
+    <None Include="Templates\FrontV4\README.md" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
@@ -89,9 +200,7 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Templates\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

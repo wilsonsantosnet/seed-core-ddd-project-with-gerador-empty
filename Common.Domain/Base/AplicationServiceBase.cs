@@ -75,33 +75,31 @@ namespace Common.Domain.Base
             this.BeginTransaction();
 
             var resultDomain = await this._serviceBase.Save(entitysChanged);
-            var resultDto = this.MapperDomainToDto<TD>(resultDomain);
-
             if (!DomainIsValid())
-                return resultDto;
+                return this.MapperDomainToDto<TD>(resultDomain);
 
             await this.CommitAsync();
-            return resultDto;
+            return this.MapperDomainToDto<TD>(resultDomain);
         }
+
         public virtual async Task<TD> SavePartial(TD entity,  bool questionToContinue = false) 
         {
             var entityChanged = await this.AlterDomainWithDto(entity);
             if (entityChanged.IsNull())
             {
-                this._serviceBase.AddDomainValidation("Não econtrado");
+                this._serviceBase.AddDomainValidation("Não encontrado");
                 return entity;
             }
 
             this.BeginTransaction();
 
             var resultDomain = await this._serviceBase.SavePartial(entityChanged, questionToContinue);
-            var resultDto = this.MapperDomainToDto<TD>(resultDomain);
-
             if (!DomainIsValid())
-                return resultDto;
+                return this.MapperDomainToDto<TD>(resultDomain);
 
             await this.CommitAsync();
-            return resultDto;
+
+            return this.MapperDomainToDto<TD>(resultDomain);
 
         }
 
@@ -113,13 +111,11 @@ namespace Common.Domain.Base
             this.BeginTransaction();
 
             var resultDomain = await this._serviceBase.Save(model, questionToContinue);
-            var resultDto = this.MapperDomainToDto<TD>(resultDomain);
-
             if (!DomainIsValid())
-                return resultDto;
+                return this.MapperDomainToDto<TD>(resultDomain);
 
             await this.CommitAsync();
-            return resultDto;
+            return this.MapperDomainToDto<TD>(resultDomain); ;
         }
 
         
