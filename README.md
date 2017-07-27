@@ -46,4 +46,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 17-) o método AddSigningCredential desse mesmo arquivo, só deve ficar descomentado caso vc tenha um certificado digital ,nesse caso vc descomenta esse método e comenta o método AddTemporarySigningCredential. caso contrario comenta o primeiro e descomenta o segundo
 
+18-) caso não tenha angular intalado npm install -g @angular/cli
+
+19-) ng serve --open
 
