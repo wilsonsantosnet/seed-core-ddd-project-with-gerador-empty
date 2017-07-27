@@ -13,9 +13,13 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 6-) escolher a opção 1 (clonar e copiar para aplicação)
 
+6.1) No projeto Seed.Gen Mostar Todos os Arquivos 
+
+6.2) Incluir na pasta template as bastas Back e Front
+
 7-) Compilar
 
-8-) rodar npm install
+8-) abrir prompt de comando entrar na pasta Seed.Spa.UI rodar npm install
 
 9-) no gerador configurar a classe ConfigContext com as tabelas que serão geradas
 
