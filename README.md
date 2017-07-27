@@ -26,7 +26,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 8-) abrir prompt de comando entrar na pasta Seed.Spa.UI rodar npm install (Instalar node.js caso ainda não tenha [https://nodejs.org/en/])
 
-9-) no gerador configurar a classe ConfigContext com as tabelas que serão geradas
+9-) no gerador configurar a classe ConfigContext com as tabelas que serão geradas [linha 46]
 
 10-) Configurar connection string no gerador app.config
 
