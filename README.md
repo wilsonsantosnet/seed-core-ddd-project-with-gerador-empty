@@ -38,8 +38,12 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 13-) No projeto Seed.ui pasta Presentation, encontrar o arquivo /src/app/global.service.ts, nesse arquivo existe uma classe chamanda AuthSettings com uma propriedade chamada CLIENT_ID, essa propriedade deve conter o valor  da propriedade ClientId confirada no item do tipo implicit, no método GetClients do arquivo Config.cs do projeto de Sso.Server.Api da pata SSO\Auth 
 
-14-) no projeto de Seed.API da pasta Services no arquivo  Program descomentar  essa linha ".UseStartup<Startup>()"
+14-) No projeto de Seed.API da pasta Services no arquivo  Program descomentar  essa linha ".UseStartup<Startup>()"
 
-15-) no projeto de SSO no arquivo UserServices descomentar código
+15-) No projeto de Sso.Server.Api da pata SSO\Auth no arquivo UserServices descomentar código
+
+16-) No projeto de Sso.Server.Api da pata SSO\Auth no arquivo Startuo.cs na linha AddIdentityServer , remover : e descomentar as linhas baixo
+
+17-) o método AddSigningCredential desse mesmo arquivo, só deve ficar descomentado caso vc tenha um certificado digital ,nesse caso vc descomenta esse método e comenta o método AddTemporarySigningCredential. caso contrario comenta o primeiro e descomenta o segundo
 
 
