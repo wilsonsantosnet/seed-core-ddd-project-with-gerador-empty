@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Target.Pendencias.Gen
+namespace Seed.Gen
 {
     public class ConfigExternalResources
     {

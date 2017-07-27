@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Cna.Erp.Gen
+namespace Seed.Gen
 {
     public class ConfigContext
     {
