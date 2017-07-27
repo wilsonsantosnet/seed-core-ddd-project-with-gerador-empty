@@ -1,7 +1,11 @@
 # seed-core-ddd-project-with-gerador-empty
 Seed vazio para projetos  SPA / DDD / Gerador
 
-1-) Clonar Esse Rep na pasta C:\Projetos (git clone https://github.com/wilsonsantosnet/seed-core-ddd-project-with-gerador-empty.git)
+
+0-) Instalar git shell [https://git-for-windows.github.io/]
+0.1) Instalar o Conemu [https://www.fosshub.com/ConEmu.html/ConEmuSetup.161206.exe]
+
+1-) Clonar Esse Rep na pasta C:\Projetos (git clone [https://github.com/wilsonsantosnet/seed-core-ddd-project-with-gerador-empty.git])
 
 2-) abrir solution seed.sln
 
