@@ -38,7 +38,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 13-) No projeto Seed.ui pasta Presentation, encontrar o arquivo /src/app/global.service.ts, nesse arquivo existe uma classe chamanda AuthSettings com uma propriedade chamada CLIENT_ID, essa propriedade deve conter o valor  da propriedade ClientId confirada no item do tipo implicit, no método GetClients do arquivo Config.cs do projeto de Sso.Server.Api da pata SSO\Auth 
 
-14-) no projeto de API no arquivo  Program descomentar  essa linha ".UseStartup<Startup>()"
+14-) no projeto de Seed.API da pasta Services no arquivo  Program descomentar  essa linha ".UseStartup<Startup>()"
 
 15-) no projeto de SSO no arquivo UserServices descomentar código
 
