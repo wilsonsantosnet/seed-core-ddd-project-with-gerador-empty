@@ -1,7 +1,7 @@
 # seed-core-ddd-project-with-gerador-empty
 Seed vazio para projetos  SPA / DDD / Gerador
 
-1-) Clonar Esse Rep (git clone https://github.com/wilsonsantosnet/seed-core-ddd-project-with-gerador-empty.git)
+1-) Clonar Esse Rep na pasta C:\Projetos (git clone https://github.com/wilsonsantosnet/seed-core-ddd-project-with-gerador-empty.git)
 
 2-) abrir solution seed.sln
 
