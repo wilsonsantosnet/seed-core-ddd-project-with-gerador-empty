@@ -20,7 +20,9 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 6.1) No projeto Seed.Gen Mostar Todos os Arquivos 
 
-6.2) Incluir na pasta template as bastas Back e Front
+6.2) Incluir na pasta template as pastas Back e Front
+
+6.3) Selecionar todos os aquivos da pasta Back e Front, clicar com botão direito , opção property e marcar para Copiar Sempre (Copy Always)
 
 7-) Compilar
 
@@ -30,12 +32,14 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 10-) Configurar connection string no gerador app.config
 
-11-) Rodar gerador opção 3 (gerar código)
+11-) Verifica no arquivo App.Config os caminhos onde serão gerador os arquivos de Back e front variaves de appSettings
 
-12-) no projeto Seed.ui pasta Presentation encontrar o arquivo /src/app/global.service.ts
+12-) Rodar gerador opção 3 (gerar código)
 
-13-) no projeto de API no arquivo  Program descomentar  essa linha ".UseStartup<Startup>()"
+13-) no projeto Seed.ui pasta Presentation encontrar o arquivo /src/app/global.service.ts
 
-14-) no projeto de SSO no arquivo UserServices descomentar código
+14-) no projeto de API no arquivo  Program descomentar  essa linha ".UseStartup<Startup>()"
+
+15-) no projeto de SSO no arquivo UserServices descomentar código
 
 
