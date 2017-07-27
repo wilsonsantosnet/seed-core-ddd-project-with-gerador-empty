@@ -47,7 +47,7 @@ namespace Seed.Gen
                 ResouceRepositoryName = "framework-angular2.0-CRUD",
                 ResourceUrlRepository = "https://github.com/wilsonsantosnet/framework-angular2.0-CRUD.git",
                 ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
-                ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Target.seed-core-ddd-project-with-gerador-emptys.Spa.Ui.V4\src\app\common"
+                ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Target.seed-core-ddd-project-with-gerador-emptys.Spa.Ui\src\app\common"
             };
 
         }
