@@ -32,7 +32,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 11-) Rodar gerador opção 3 (gerar código)
 
-12-) Configurar SSO no arquivo GlobalService do  projeto de UI (informações do cliente , verificar isso no projeto de SSO arquivo Config)
+12-) no projeto Seed.ui pasta Presentation encontrar o arquivo /src/app/global.service.ts
 
 13-) no projeto de API no arquivo  Program descomentar  essa linha ".UseStartup<Startup>()"
 
