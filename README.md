@@ -4,10 +4,14 @@ Seed vazio para projetos  SPA / DDD / Gerador
 -- PRÉ REQUISITOS;
 
 1-) git shell [https://git-for-windows.github.io/]
+
 2-) node.js [https://nodejs.org/en/])
+
 3-) npm install -g @angular/cli
+
 3-) opcional [Conemu [https://www.fosshub.com/ConEmu.html/ConEmuSetup.161206.exe]]
 
+<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Setup >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 
 
 1-) Clonar Esse Rep na pasta C:\Projetos (git clone [https://github.com/wilsonsantosnet/seed-core-ddd-project-with-gerador-empty.git])
