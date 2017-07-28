@@ -12,7 +12,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 3-) compilar projeto
 
-4-) Conferir arquivo ConfigExternalResources no greador para ver quais repositórios serão clonados
+4-) Conferir arquivo ConfigExternalResources no greador para ver quais repositórios serão clonados, e em quais pastas os arquivos serão copiados
 
 5-) Clicar com botão direito no projeto de gerador e rodar em debug
 
