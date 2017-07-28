@@ -16,7 +16,7 @@ namespace Sso.Server.Api
          
             // return await Task.Run(() =>
             // {
-                // var user = new User();
+                // var user = default(User);
 
                 // var userAdmin = Config.GetUsers()
                     // .Where(_ => _.Username == userName)
@@ -29,7 +29,7 @@ namespace Sso.Server.Api
                 // return user;
             // });
 			
-			return new User();
+		return new User();
         }
 
     }
