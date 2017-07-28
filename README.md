@@ -40,9 +40,9 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 14-) No projeto de Seed.API da pasta Services no arquivo  Program descomentar  essa linha ".UseStartup<Startup>()"
 
-15-) No projeto de Sso.Server.Api da pata SSO\Auth no arquivo UserServices descomentar código
+15-) No projeto de Sso.Server.Api da pata SSO\Auth no arquivo UserServices descomentar código de autenticação defualt e retira o return fora da task
 
-16-) No projeto de Sso.Server.Api da pata SSO\Auth no arquivo Startuo.cs na linha AddIdentityServer , remover : e descomentar as linhas baixo
+16-) No projeto de Sso.Server.Api da pata SSO\Auth no arquivo Startup.cs na linha AddIdentityServer , remover o ponto e virgula e descomentar as linhas baixo
 
 17-) o método AddSigningCredential desse mesmo arquivo, só deve ficar descomentado caso vc tenha um certificado digital ,nesse caso vc descomenta esse método e comenta o método AddTemporarySigningCredential. caso contrario comenta o primeiro e descomenta o segundo
 
