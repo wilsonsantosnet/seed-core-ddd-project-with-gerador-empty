@@ -298,6 +298,9 @@ namespace IdentityServer4.Quickstart.UI
             {
                 await _events.RaiseAsync(new UserLogoutSuccessEvent(user.GetSubjectId(), user.GetName()));
             }
+            
+             if (model.ReturnUrl != null)
+                return Redirect(model.ReturnUrl);
 
             return View("LoggedOut", vm);
         }
