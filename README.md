@@ -11,7 +11,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 3-) opcional [Conemu [https://www.fosshub.com/ConEmu.html/ConEmuSetup.161206.exe]]
 
-<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<< Setup >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+-- SETUP
 
 
 1-) Clonar Esse Rep na pasta C:\Projetos (git clone [https://github.com/wilsonsantosnet/seed-core-ddd-project-with-gerador-empty.git])
