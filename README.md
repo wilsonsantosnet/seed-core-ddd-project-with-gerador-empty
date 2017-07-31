@@ -56,5 +56,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 22-) o método AddSigningCredential desse mesmo arquivo, só deve ficar descomentado caso vc tenha um certificado digital ,nesse caso vc descomenta esse método e comenta o método AddTemporarySigningCredential. caso contrario comenta o primeiro e descomenta o segundo
 
-23-) entra na pasta Seed.Spa.Ui e rodar no prompt de comando ng serve --open
+23-) Clicar com botão direito na Solution , item propertys, startuo Project , escolher Multiple Startup Project e marcar como start os projetos de Seed.Api / Sso.Server.Api
+
+24-) entra na pasta Seed.Spa.Ui e rodar no prompt de comando ng serve --open
 
