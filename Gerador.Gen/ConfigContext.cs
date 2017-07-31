@@ -22,7 +22,7 @@ namespace Seed.Gen
                 ConnectionString = ConfigurationManager.ConnectionStrings["Seed"].ConnectionString,
 
                 Namespace = "Seed",
-                ContextName = "Seed",
+                ContextName = contextName,
                 ShowKeysInFront = true,
                 LengthBigField = 250,
 
