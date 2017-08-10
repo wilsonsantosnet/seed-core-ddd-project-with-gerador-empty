@@ -32,8 +32,7 @@ namespace Sso.Server.Api.Controllers
             if (identityEndPoint.IsNull())
                 throw new InvalidOperationException("Endpoint invalid");
 
-            var disco = await DiscoveryClient.GetAsync(identityEndPoint);
-            var tokenClient = new TokenClient(disco.TokenEndpoint, accountCredencial.ClientId, accountCredencial.ClientSecret);
+            var tokenClient = new TokenClient(identityEndPoint + "/connect/token", accountCredencial.ClientId, accountCredencial.ClientSecret);
             var tokenResponse = await tokenClient.RequestResourceOwnerPasswordAsync(accountCredencial.User, accountCredencial.Password, accountCredencial.Scope);
 
             if (tokenResponse.IsError)
