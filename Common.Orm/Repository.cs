@@ -33,6 +33,12 @@ namespace Common.Orm
                 .AsNoTracking();
         }
 
+        public virtual IQueryable<T> GetAllAsTracking(params Expression<Func<T, object>>[] includes)
+        {
+            IQueryable<T> query = ctx.Set<T>();
+            return includes.Aggregate(query, (current, include) => current.Include(include));
+        }
+
         public virtual T Add(T entity)
         {
             var result = this.dbSet.Add(entity);
@@ -62,6 +68,17 @@ namespace Common.Orm
         {
             dbSet.Remove(entity);
         }
+        
+        public virtual void RemoveRangeAndCommit(IEnumerable<T> entitys)
+        {
+            dbSet.RemoveRange(entitys);
+            ctx.SaveChanges();
+        }
+        
+        public virtual void RemoveRange(IEnumerable<T> entitys)
+        {
+            dbSet.RemoveRange(entitys);
+        }
 
         public virtual async Task<PaginateResult<T>> PagingAndDefineFields(FilterBase filters, IQueryable<T> queryFilter)
         {
@@ -74,6 +91,7 @@ namespace Common.Orm
             return new PaginateResult<T>
             {
                 TotalCount = totalCount,
+                PageSize = filters.PageSize,
                 ResultPaginatedData = queryMapped,
                 Source = queryFilter
             };
