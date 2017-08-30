@@ -43,14 +43,14 @@ namespace Common.API.Extensions
                         {
                             foreach (var item in claims
                                 .Select(_ => new KeyValuePair<string, object>(_.Type, _.Value)))
-                                {
-                                    if (!claimsDictonary.ContainsKey(item.Key))
-                                        claimsDictonary.Add(item.Key, item.Value);
-                                }
+                            {
+                                if (!claimsDictonary.ContainsKey(item.Key))
+                                    claimsDictonary.Add(item.Key, item.Value);
+                            }
 
                         }
 
-                        currentUser.Init(tokenClear, claimsDictonary);
+                        this.ConfigClaims(currentUser, tokenClear, claimsDictonary);
                     }
                     catch (Exception ex)
                     {
@@ -60,6 +60,11 @@ namespace Common.API.Extensions
                 }
             }
             await this._next.Invoke(context);
+        }
+
+        protected virtual void ConfigClaims(CurrentUser currentUser, string tokenClear, Dictionary<string, object> claimsDictonary)
+        {
+            currentUser.Init(tokenClear, claimsDictonary);
         }
 
         private static IEnumerable<Claim> GetClaimsFromReadToken(string tokenClear, JwtSecurityTokenHandler jwt)
