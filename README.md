@@ -44,7 +44,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 16-) Rodar gerador opção 3 (gerar código)
 
-17-) no projeto Seed.Api pasta Services configurar a connectionstring doarquivo appsettings.json
+17-) no projeto Seed.Api pasta Services configurar a connectionstring do arquivo appsettings.json
 
 18-) No projeto Seed.ui pasta Presentation, encontrar o arquivo /src/app/global.service.ts, nesse arquivo existe uma classe chamanda AuthSettings com uma propriedade chamada CLIENT_ID, essa propriedade deve conter o valor  da propriedade ClientId confirada no item do tipo implicit, no método GetClients do arquivo Config.cs do projeto de Sso.Server.Api da pata SSO\Auth 
 
