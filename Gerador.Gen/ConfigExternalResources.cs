@@ -74,7 +74,7 @@ namespace Seed.Gen
             {
                 ReplaceLocalFilesApplication = true,
                 DownloadOneTime = true,
-		DownloadOneTimeFileVerify = "package.json",
+				DownloadOneTimeFileVerify = "package.json",
                 ResouceRepositoryName = "Seed-layout-front-bs4-angular2.0",
                 ResourceUrlRepository = "https://github.com/wilsonsantosnet/Seed-layout-front-bs4-angular2.0.git",
                 ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
@@ -82,8 +82,37 @@ namespace Seed.Gen
 			};
 
         }
+		
+		private ExternalResource ConfigExternarResourcesSeedLayoutBs4Angular20OnlyThisFiles(bool replaceLocalFilesApplication)
+        {
 
+            return new ExternalResource
+            {
+                ReplaceLocalFilesApplication = true,
+                ResouceRepositoryName = "Seed-layout-front-bs4-angular2.0",
+                ResourceUrlRepository = "https://github.com/wilsonsantosnet/Seed-layout-front-bs4-angular2.0.git",
+                ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
+                ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Seed.Spa.Ui",
+                OnlyThisFiles = new List<string> {
+                    "package.json",
+                    "Web.config",
+                    "src\\typings.d.ts",
+                    "src\\app\\app.component.css",
+                    "src\\app\\app.component.html",
+                    "src\\app\\app.component.ts",
+                    "src\\app\\app.module.ts",
+                    "src\\app\\global.service.culture.ts",
+                    "src\\app\\global.service.ts",
+                    "src\\app\\startup.service.ts",
+                    "src\\app\\util\\util-shared.module.ts",
+                    "src\\app\\main\\main.component.css",
+                    "src\\app\\main\\main.component.html",
+                    "src\\app\\main\\main.component.ts",
+                    "src\\app\\main\\main.service.ts",
+                }
 
+            };
+        }
 
         public IEnumerable<ExternalResource> GetConfigExternarReources()
         {
@@ -97,6 +126,7 @@ namespace Seed.Gen
                ConfigExternarResourcesTemplatesFrontBs4Angular20(replaceLocalFilesApplication),
                ConfigExternarResourcesFrameworkAngula20Crud(replaceLocalFilesApplication),
                ConfigExternarResourcesSeedLayoutBs4Angular20(replaceLocalFilesApplication),
+               ConfigExternarResourcesSeedLayoutBs4Angular20OnlyThisFiles(replaceLocalFilesApplication)
 
             };
 
