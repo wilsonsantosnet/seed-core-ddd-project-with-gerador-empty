@@ -60,16 +60,6 @@ namespace Sso.Server.Api
             services.Configure<ConfigSettingsBase>(Configuration.GetSection("ConfigSettings"));
             services.AddSingleton<IConfiguration>(Configuration);
 
-            services.AddCors(options =>
-            {
-                options.AddPolicy("frontcore", policy =>
-                {
-                    policy.WithOrigins(Configuration.GetSection("ConfigSettings")["ClientAuthorityEndPoint"])
-                        .AllowAnyHeader()
-                        .AllowAnyMethod();
-                });
-            });
-
             // Add cross-origin resource sharing services Configurations
             //Cors.Enable(services);
             services.AddMvc();
