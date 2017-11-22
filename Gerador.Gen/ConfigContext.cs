@@ -25,6 +25,7 @@ namespace Seed.Gen
                 ContextName = contextName,
                 ShowKeysInFront = true,
                 LengthBigField = 250,
+                OverrideFiles = true,
 
                 OutputClassDomain = ConfigurationManager.AppSettings[string.Format("outputClassDomain{0}", contextName)],
                 OutputClassInfra = ConfigurationManager.AppSettings[string.Format("outputClassInfra{0}", contextName)],
@@ -43,7 +44,8 @@ namespace Seed.Gen
                 TableInfo = new UniqueListTableInfo
                 {
 
-                   new TableInfo { TableName = "Teste", MakeDomain = true, MakeApp = true, MakeDto = true, MakeCrud = true, MakeApi= true, MakeSummary = true , MakeFront= true},
+                   new TableInfo { TableName = "Sample", MakeDomain = true, MakeApp = true, MakeDto = true, MakeCrud = true, MakeApi= true, MakeSummary = true , MakeFront= true},
+                   new TableInfo { TableName = "SampleType", MakeDomain = true, MakeApp = true, MakeDto = true, MakeCrud = true, MakeApi= true, MakeSummary = true , MakeFront= true},
 
                 }
             };
