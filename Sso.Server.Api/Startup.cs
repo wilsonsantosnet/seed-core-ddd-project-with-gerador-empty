@@ -2,6 +2,7 @@
 using Common.API.Extensions;
 using Common.Domain.Base;
 using Common.Domain.Model;
+using IdentityServer4;
 using IdentityServer4.EntityFramework.DbContexts;
 using IdentityServer4.EntityFramework.Mappers;
 using IdentityServer4.Validation;
@@ -12,6 +13,7 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
+using System;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -84,19 +86,33 @@ namespace Sso.Server.Api
             loggerFactory.AddDebug();
             loggerFactory.AddFile("Logs/sm-sso-server-api-{Date}.log");
 
-            app.UseCors("frontcore");
-  
+            app.UseCors("AllowAnyOrigin");
+
+            app.UseIdentityServer();
+            app.UseGoogleAuthentication(new GoogleOptions
+            {
+                AuthenticationScheme = "Google",
+                SignInScheme = IdentityServerConstants.ExternalCookieAuthenticationScheme,
+                ClientId = "857854978384-sv33ngtei50k8fn5ea37rcddo08n0ior.apps.googleusercontent.com",
+                ClientSecret = "x1SWT89gyn5LLLyMNFxEx_Ss"
+            });
+
             app.UseIdentityServer();
 
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();
         }
 
-     
+
 
         private X509Certificate2 GetRSAParameters()
         {
-            return new X509Certificate2(Path.Combine(_env.ContentRootPath, "idsvr3test.pfx"), "idsrv3test", X509KeyStorageFlags.Exportable);
+            var fileCert = Path.Combine(_env.ContentRootPath, "pfx", "ids4smbasic.pfx");
+            if (!File.Exists(fileCert))
+                throw new InvalidOperationException("Certificado não encontrado");
+
+            var password = "vm123s456";
+            return new X509Certificate2(fileCert, password, X509KeyStorageFlags.Exportable);
         }
     }
 }

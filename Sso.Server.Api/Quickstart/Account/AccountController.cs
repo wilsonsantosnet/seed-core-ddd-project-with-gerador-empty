@@ -20,6 +20,8 @@ using IdentityServer4.Events;
 using IdentityServer4.Extensions;
 using Sso.Server.Api;
 using Sso.Server.Api.Model;
+using Common.Domain.Base;
+using Microsoft.Extensions.Options;
 
 namespace IdentityServer4.Quickstart.UI
 {
@@ -36,12 +38,18 @@ namespace IdentityServer4.Quickstart.UI
         private readonly IIdentityServerInteractionService _interaction;
         private readonly IEventService _events;
         private readonly AccountService _account;
+        private readonly IOptions<ConfigSettingsBase> _settings;
+        private readonly IOptions<ConfigEmailBase> _configEmail;
+
 
         public AccountController(
             IIdentityServerInteractionService interaction,
             IClientStore clientStore,
             IHttpContextAccessor httpContextAccessor,
             IEventService events,
+            IOptions<ConfigSettingsBase> settings,
+            IOptions<ConfigEmailBase> configEmail,
+
             TestUserStore users = null)
         {
             // if the TestUserStore is not in DI, then we'll just use the global users collection
@@ -49,7 +57,10 @@ namespace IdentityServer4.Quickstart.UI
             _usersServices = new UserServices();
             _interaction = interaction;
             _events = events;
+            _settings = settings;
+            _configEmail = configEmail;
             _account = new AccountService(interaction, httpContextAccessor, clientStore);
+            
         }
 
         /// <summary>
@@ -78,6 +89,7 @@ namespace IdentityServer4.Quickstart.UI
         {
             if (ModelState.IsValid)
             {
+                model.RememberLogin = true;
                 // validate username/password against in-memory store
                 var user = await _usersServices.Auth(model.Username, model.Password);
                 if (user.IsNotNull())
@@ -205,15 +217,27 @@ namespace IdentityServer4.Quickstart.UI
             var userId = userIdClaim.Value;
 
             // check if the external user is already provisioned
-            var user = _users.FindByExternalProvider(provider, userId);
-            if (user == null)
+            var _user = _users.FindByExternalProvider(provider, userId);
+            if (_user == null)
             {
                 // this sample simply auto-provisions new external user
                 // another common approach is to start a registrations workflow first
-                user = _users.AutoProvisionUser(provider, userId, claims);
+                _user = _users.AutoProvisionUser(provider, userId, claims);
             }
 
+            var user = new User() { Username = _user.Username, SubjectId = _user.SubjectId };
             var additionalClaims = new List<Claim>();
+
+            //External 
+            //var tenant = await this._usersServices.AuthByExternalLogin(claims);
+            //if (tenant.Claims.IsAny())
+            //{
+            //    foreach (var item in tenant.Claims)
+            //        additionalClaims.Add(new Claim(item.Type, item.Value));
+
+            //    user.Username = tenant.Username;
+            //    user.SubjectId = tenant.SubjectId;
+            //}
 
             // if the external system sent a session id claim, copy it over
             var sid = claims.FirstOrDefault(x => x.Type == JwtClaimTypes.SessionId);
@@ -298,11 +322,100 @@ namespace IdentityServer4.Quickstart.UI
             {
                 await _events.RaiseAsync(new UserLogoutSuccessEvent(user.GetSubjectId(), user.GetName()));
             }
-            
-             if (model.ReturnUrl != null)
+
+            if (model.ReturnUrl != null)
                 return Redirect(model.ReturnUrl);
 
             return View("LoggedOut", vm);
+        }
+
+        ///// <summary>
+        ///// ForgottenPassword
+        ///// </summary>
+        //[HttpGet]
+        //public async Task<IActionResult> ForgottenPassword()
+        //{
+        //    return await Task.Run(() => { return View(); });
+        //}
+
+        //[HttpPost]
+        //public async Task<IActionResult> ForgottenPassword(string Email)
+        //{
+        //    var userEmail = await this._rep.SingleOrDefaultAsync(this._rep.GetAll().Where(_ => _.Email == Email));
+        //    if (userEmail.IsNotNull())
+        //    {
+        //        var guid = Guid.NewGuid();
+        //        var content = "<a href='" + this._settings.Value.AuthorityEndPoint + "/account/ForgottenPasswordReset/" + guid.ToString() + "'>Redefinir senha</a>";
+
+        //        var email = new Common.Mail.Email();
+
+        //        email.Config(this._configEmail.Value.SmtpServer, this._configEmail.Value.SmtpUser, this._configEmail.Value.SmtpPassword);
+        //        email.AddAddressFrom(this._configEmail.Value.FromText, this._configEmail.Value.FromEmail);
+
+        //        //email.AddAddressFrom("suporte", "suporte@cnabox.com.br");
+        //        //email.Config("smtplw.com.br", "dmts", "ttxteKBf3912");
+        //        //email.AddAddressFrom("suporte", "suporte@cnabox.com.br");
+        //        email.AddAddressTo(Email, Email);
+        //        email.Send("Resetar senha", content);
+
+        //        userEmail.SetarGuidResetPassword(guid);
+        //        userEmail.SetarDateResetPassword(DateTime.Now);
+
+        //        this._rep.Update(userEmail);
+        //        await this._rep.CommitAsync();
+
+        //        return View("ForgottenPasswordSucess");
+        //    }
+
+        //    return View("ForgottenPasswordError");
+        //}
+
+
+        //[HttpGet]
+        //public async Task<IActionResult> ForgottenPasswordReset(string Id)
+        //{
+        //    var userGuid = await this._rep.SingleOrDefaultAsync(this._rep.GetAll().Where(_ => _.GuidResetPassword == Guid.Parse(Id)));
+        //    if (userGuid.IsNotNull())
+        //    {
+        //        var tempoDescorrido = DateTime.Now.Subtract(userGuid.DateResetPassword.Value).Minutes;
+        //        if (tempoDescorrido <= 60)
+        //            return View("ForgottenPasswordReset", Id);
+        //    }
+        //    return View("ForgottenPasswordErrorGuid");
+        //}
+
+
+        //[HttpPost]
+        //public async Task<IActionResult> ForgottenPasswordReset(string guid, string newPassword, string newConfPassword)
+        //{
+        //    var userGuid = await this._rep.SingleOrDefaultAsync(this._rep.GetAll().Where(_ => _.GuidResetPassword == Guid.Parse(guid)));
+        //    if (userGuid.IsNotNull())
+        //    {
+        //        var tempoDescorrido = DateTime.Now.Subtract(userGuid.DateResetPassword.Value).Minutes;
+        //        if (tempoDescorrido <= 60)
+        //        {
+        //            if (newPassword == newConfPassword)
+        //            {
+        //                userGuid.RedefinirPassword(newPassword);
+        //                this._rep.Update(userGuid);
+        //                await this._rep.CommitAsync();
+
+        //                return View("ForgottenPasswordResetSuccess");
+        //            }
+        //            else
+        //            {
+        //                return View("ForgottenPasswordErrorPassword");
+        //            }
+
+        //        }
+        //    }
+        //    return View("ForgottenPasswordErrorGuid");
+        //}
+
+        [HttpGet]
+        public async Task<IActionResult> ComeBackApp()
+        {
+            return await Task.Run(() => { return Redirect(this._settings.Value.PostLogoutRedirectUris); });
         }
     }
 }
