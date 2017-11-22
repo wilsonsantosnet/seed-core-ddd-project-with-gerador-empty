@@ -44,7 +44,7 @@ namespace Sso.Server.Api
         
             var cns =
              Configuration
-                .GetSection("EFCoreConnStrings:Default").Value;
+                .GetSection("ConfigConnectionString:Default").Value;
 
 
             services.AddIdentityServer();
