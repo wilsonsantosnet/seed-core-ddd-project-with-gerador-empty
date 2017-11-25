@@ -1,23 +1,16 @@
 ﻿using Common.API;
-using Common.API.Extensions;
 using Common.Domain.Base;
 using Common.Domain.Model;
 using IdentityServer4;
-using IdentityServer4.EntityFramework.DbContexts;
-using IdentityServer4.EntityFramework.Mappers;
 using IdentityServer4.Validation;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using System;
 using System.IO;
-using System.Linq;
-using System.Reflection;
-using System.Security.Cryptography;
 using System.Security.Cryptography.X509Certificates;
 
 namespace Sso.Server.Api
@@ -59,9 +52,9 @@ namespace Sso.Server.Api
             services.AddTransient<IResourceOwnerPasswordValidator, ResourceOwnerPasswordValidator>();
             services.Configure<ConfigSettingsBase>(Configuration.GetSection("ConfigSettings"));
             services.AddSingleton<IConfiguration>(Configuration);
-
+            
             // Add cross-origin resource sharing services Configurations
-            //Cors.Enable(services);
+            Cors.Enable(services);
             services.AddMvc();
 
 
@@ -86,8 +79,6 @@ namespace Sso.Server.Api
                 ClientId = "857854978384-sv33ngtei50k8fn5ea37rcddo08n0ior.apps.googleusercontent.com",
                 ClientSecret = "x1SWT89gyn5LLLyMNFxEx_Ss"
             });
-
-            app.UseIdentityServer();
 
             app.UseStaticFiles();
             app.UseMvcWithDefaultRoute();

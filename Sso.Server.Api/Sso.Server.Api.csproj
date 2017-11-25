@@ -62,6 +62,10 @@
     </Content>
     <Content Include="wwwroot\logo.png" />
   </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Sso.Server.Api.csproj" />
+  </ItemGroup>
   <ItemGroup>
    <PackageReference Include="IdentityServer4" Version="1.5.2" />
     <PackageReference Include="IdentityServer4.AspNetIdentity" Version="1.0.1" />
