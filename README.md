@@ -11,6 +11,8 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 3-) opcional [Conemu [https://www.fosshub.com/ConEmu.html/ConEmuSetup.161206.exe]]
 
+4-) Crie um banco com o script da pasta \Projetos\seed-core-ddd-project-with-gerador-empty\Gerador.Gen\Scripts\Sample.Seed.sql
+
 -- SETUP
 
 
