@@ -40,7 +40,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 13-) no gerador configurar a classe ConfigContext com as tabelas que serão geradas [linha 46]
 
-14-) Configurar connection string no gerador app.config.
+14-) Configurar connection string no gerador app.config apantando para o seu banco.
 
 15-) Verifica no arquivo App.Config os caminhos onde serão gerador os arquivos de Back e front variaves de appSettings
 
