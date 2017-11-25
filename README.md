@@ -62,3 +62,5 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 24-) entra na pasta Seed.Spa.Ui e rodar no prompt de comando ng serve --open
 
+25-) agora pode criar outros campos na Tabela Rodar o gerador que esses serão criados em cada camada do projeto, inclusive no front
+
