@@ -68,10 +68,12 @@ namespace Common.API
             return this;
         }
 
-        public HttpResult<T> Error(string erro)
+        public HttpResult<T> Error(string erro, ErrorMap errorMap = null)
         {
 
-            var erroTraduction = new ErrorMap().GetAll().Where(_ => erro.ToUpper().Contains(_.Key.ToUpper())).SingleOrDefault().Value;
+            var _errorMap = errorMap.IsNotNull() ? errorMap : new ErrorMap();
+            var erroTraduction = _errorMap.GetTraduction(erro);
+
 
             var errorFinal = erroTraduction ?? erro;
 
