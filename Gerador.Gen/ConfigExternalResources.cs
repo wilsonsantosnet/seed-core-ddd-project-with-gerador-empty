@@ -112,6 +112,7 @@ namespace Seed.Gen
                     "src\\app\\main\\main.service.ts",
                     "src\\assets\\css\\main.css",
                     "src\\assets\\css\\main.css.map",
+					"src\\assets\\jquery.nestable.js",
                 }
 
             };
