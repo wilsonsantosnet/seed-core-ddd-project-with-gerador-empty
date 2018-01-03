@@ -40,7 +40,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 13-) no gerador configurar a classe ConfigContext com as tabelas que serão geradas [linha 46]
 
-14-) Configurar connection string no gerador app.config apantando para o seu banco.
+14-) Configurar connection string no gerador app.config apontando para o seu banco. 
 
 15-) Verifica no arquivo App.Config os caminhos onde serão gerador os arquivos de Back e front variaves de appSettings
 
@@ -58,7 +58,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 22-) o método AddSigningCredential desse mesmo arquivo, só deve ficar descomentado caso vc tenha um certificado digital ,nesse caso vc descomenta esse método e comenta o método AddTemporarySigningCredential. caso contrario comenta o primeiro e descomenta o segundo
 
-23-) Clicar com botão direito na Solution , item propertys, startuo Project , escolher Multiple Startup Project e marcar como start os projetos de Seed.Api / Sso.Server.Api
+23-) Clicar com botão direito na Solution , item propertys, startup Project , escolher Multiple Startup Project e marcar como start os projetos de Seed.Api / Sso.Server.Api
 
 24-) entra na pasta Seed.Spa.Ui e rodar no prompt de comando ng serve --open
 
