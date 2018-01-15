@@ -13,6 +13,11 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 4-) Crie um banco com o script da pasta \Projetos\seed-core-ddd-project-with-gerador-empty\Gerador.Gen\Scripts\Sample.Seed.sql
 
+5-) instalar .net core LTM 1.1.X [https://www.microsoft.com/net/download/windows]
+
+5.1-) instalar SDK installer [https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-windows-x64-installer]
+
+
 -- SETUP
 
 
