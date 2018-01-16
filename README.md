@@ -69,3 +69,5 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 25-) agora pode criar outros campos na Tabela Rodar o gerador que esses serão criados em cada camada do projeto, inclusive no front
 
+<img src="https://drive.google.com/file/d/1qE6RSNoJCipIbQMYFmT41_Y7GXW2WXds/view">
+
