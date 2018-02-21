@@ -29,7 +29,7 @@ namespace Sso.Server.Api
             //});
 
 
-            return new User();
+            throw new InvalidCastException("Auth User Service not implemented, uncomment code above");
 
         }
 
