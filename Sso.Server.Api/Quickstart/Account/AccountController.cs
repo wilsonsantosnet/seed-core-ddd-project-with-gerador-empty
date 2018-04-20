@@ -279,14 +279,7 @@ namespace IdentityServer4.Quickstart.UI
         {
             var vm = await _account.BuildLogoutViewModelAsync(logoutId);
             vm.ReturnUrl = returnUrl;
-
-            if (vm.ShowLogoutPrompt == false)
-            {
-                // no need to show prompt
-                return await Logout(vm);
-            }
-
-            return View(vm);
+            return await Logout(vm);
         }
 
         /// <summary>
