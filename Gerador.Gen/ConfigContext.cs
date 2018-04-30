@@ -26,6 +26,7 @@ namespace Seed.Gen
                 ShowKeysInFront = true,
                 LengthBigField = 250,
                 OverrideFiles = true,
+                UseRouteGuardInFront = true,
 
                 OutputClassDomain = ConfigurationManager.AppSettings[string.Format("outputClassDomain{0}", contextName)],
                 OutputClassInfra = ConfigurationManager.AppSettings[string.Format("outputClassInfra{0}", contextName)],
