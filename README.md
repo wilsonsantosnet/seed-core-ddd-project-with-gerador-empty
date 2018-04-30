@@ -71,7 +71,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 https://drive.google.com/file/d/1qE6RSNoJCipIbQMYFmT41_Y7GXW2WXds/view
 
-
+### EXEMPlO CONFIG.CONTEXT 
 ```
 private Context ConfigContextSeed()
         {
