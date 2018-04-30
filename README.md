@@ -71,7 +71,7 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 https://drive.google.com/file/d/1qE6RSNoJCipIbQMYFmT41_Y7GXW2WXds/view
 
-### EXEMPLO CONFIG.CONTEXT 
+# EXEMPLO CONFIG.CONTEXT 
 ## 1-) CRUD com customização de Campos## 1-) 
 ## 2-) CRUD 
 ## 3-) Component Basico sem back 
