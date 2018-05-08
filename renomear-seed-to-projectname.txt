@@ -1,0 +1,16 @@
+01-) Compila o Projeto
+02-) Replace de Seed pelo nome do projeto que deseja criar, exemplo Sample (Troca a parte de Namespace e alguma chaves que usam o nome do projeto)
+03-) Compila
+04-) Clear Solution
+05-) Fecha o Visual Studio
+06-) Abre a pasta Raiz do Projeto
+07-) Filtra todos os *.csproject
+08-) Abre todos no notepad++
+09-) Filtra *.sln
+10-) Abre no notepad++
+11-) Replace de Seed pelo nome do projeto que deseja criar, exemplo Sample
+12-) Ainda no Explorer Renomeia todas as Pasta da Raiz pelo nome do Projeto (Sample)
+13-) Filtra na raiz do projeto tudo com seed
+14-) Renomeia para o nome do projeto (sample)
+15-) Abre a Solution
+16-) Compila
