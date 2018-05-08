@@ -41,7 +41,7 @@ namespace Seed.Gen
                 Arquiteture = ArquitetureType.DDD,
                 CamelCasing = true,
                 MakeFront = true,
-                
+                AlertNotFoundTable = true,
                 Routes = new List<RouteConfig> {
                     new RouteConfig{ Route = "{ path: 'sampledash',  canActivate: [AuthGuard], loadChildren: './main/sampledash/sampledash.module#SampleDashModule' }" }
                 },
