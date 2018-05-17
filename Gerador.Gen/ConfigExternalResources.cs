@@ -10,14 +10,14 @@ namespace Seed.Gen
     public class ConfigExternalResources
     {
 
-        private ExternalResource ConfigExternarResourcesTemplatesFrontBs4Angular60(bool replaceLocalFilesApplication)
+        private ExternalResource ConfigExternarResourcesTemplatesFrontBs4Angular20(bool replaceLocalFilesApplication)
         {
 
             return new ExternalResource
             {
                 ReplaceLocalFilesApplication = replaceLocalFilesApplication,
                 ResouceRepositoryName = "template-gerador-front-bs4-angular2.0",
-                ResourceUrlRepository = "https://github.com/wilsonsantosnet/Seed-layout-front-bs4-angular6.0.git",
+                ResourceUrlRepository = "https://github.com/wilsonsantosnet/template-gerador-front-bs4-angular2.0.git",
                 ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
                 ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Gerador.Gen\Templates\Front",
             };
@@ -67,7 +67,7 @@ namespace Seed.Gen
 
         }
 
-        private ExternalResource ConfigExternarResourcesSeedLayoutBs4Angular20(bool replaceLocalFilesApplication)
+        private ExternalResource ConfigExternarResourcesSeedLayoutBs4Angular60(bool replaceLocalFilesApplication)
         {
 
             return new ExternalResource
@@ -75,8 +75,8 @@ namespace Seed.Gen
                 ReplaceLocalFilesApplication = true,
                 DownloadOneTime = true,
 				DownloadOneTimeFileVerify = "package.json",
-                ResouceRepositoryName = "Seed-layout-front-bs4-angular2.0",
-                ResourceUrlRepository = "https://github.com/wilsonsantosnet/Seed-layout-front-bs4-angular2.0.git",
+                ResouceRepositoryName = "Seed-layout-front-bs4-angular6.0",
+                ResourceUrlRepository = "https://github.com/wilsonsantosnet/Seed-layout-front-bs4-angular6.0.git",
                 ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
                 ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Seed.Spa.Ui"
 			};
