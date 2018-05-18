@@ -10,19 +10,6 @@ namespace Seed.Gen
     public class ConfigExternalResources
     {
 
-        private ExternalResource ConfigExternarResourcesTemplatesFrontBs4Angular20(bool replaceLocalFilesApplication)
-        {
-
-            return new ExternalResource
-            {
-                ReplaceLocalFilesApplication = replaceLocalFilesApplication,
-                ResouceRepositoryName = "template-gerador-front-bs4-angular2.0",
-                ResourceUrlRepository = "https://github.com/wilsonsantosnet/template-gerador-front-bs4-angular2.0.git",
-                ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
-                ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Gerador.Gen\Templates\Front",
-            };
-
-        }
 
         private ExternalResource ConfigExternarResourcesTemplatesBackDDD(bool replaceLocalFilesApplication)
         {
@@ -38,20 +25,6 @@ namespace Seed.Gen
 
         }
 
-        private ExternalResource ConfigExternarResourcesFrameworkAngula20Crud(bool replaceLocalFilesApplication)
-        {
-
-            return new ExternalResource
-            {
-                ReplaceLocalFilesApplication = true,
-                ResouceRepositoryName = "framework-angular2.0-CRUD",
-                ResourceUrlRepository = "https://github.com/wilsonsantosnet/framework-angular2.0-CRUD.git",
-                ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
-                ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Seed.Spa.Ui\src\app\common"
-            };
-
-        }
-
         private ExternalResource ConfigExternarResourcesFrameworkCommon(bool replaceLocalFilesApplication)
         {
 
@@ -63,6 +36,34 @@ namespace Seed.Gen
                 ResourceUrlRepository = "https://github.com/wilsonsantosnet/framework-core-common.git",
                 ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
                 ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty"
+            };
+
+        }
+
+        private ExternalResource ConfigExternarResourcesTemplatesFrontBs4Angular20(bool replaceLocalFilesApplication)
+        {
+
+            return new ExternalResource
+            {
+                ReplaceLocalFilesApplication = replaceLocalFilesApplication,
+                ResouceRepositoryName = "template-gerador-front-bs4-angular2.0",
+                ResourceUrlRepository = "https://github.com/wilsonsantosnet/template-gerador-front-bs4-angular2.0.git",
+                ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
+                ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Gerador.Gen\Templates\Front",
+            };
+
+        }
+
+        private ExternalResource ConfigExternarResourcesFrameworkAngula60Crud(bool replaceLocalFilesApplication)
+        {
+
+            return new ExternalResource
+            {
+                ReplaceLocalFilesApplication = true,
+                ResouceRepositoryName = "framework-angular6.0-CRUD",
+                ResourceUrlRepository = "https://github.com/wilsonsantosnet/framework-angular6.0-CRUD.git",
+                ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
+                ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Seed.Spa.Ui\src\app\common"
             };
 
         }
@@ -83,20 +84,19 @@ namespace Seed.Gen
 
         }
 		
-		private ExternalResource ConfigExternarResourcesSeedLayoutBs4Angular20OnlyThisFiles(bool replaceLocalFilesApplication)
+		private ExternalResource ConfigExternarResourcesSeedLayoutBs4Angular60OnlyThisFiles(bool replaceLocalFilesApplication)
         {
 
             return new ExternalResource
             {
                 ReplaceLocalFilesApplication = true,
-                ResouceRepositoryName = "Seed-layout-front-bs4-angular2.0",
-                ResourceUrlRepository = "https://github.com/wilsonsantosnet/Seed-layout-front-bs4-angular2.0.git",
+                ResouceRepositoryName = "Seed-layout-front-bs4-angular6.0",
+                ResourceUrlRepository = "https://github.com/wilsonsantosnet/Seed-layout-front-bs4-angular6.0.git",
                 ResourceLocalPathFolderExecuteCloning = @"C:\Projetos\Outros\Repositorios",
                 ResourceLocalPathDestinationFolrderApplication = @"C:\Projetos\seed-core-ddd-project-with-gerador-empty\Seed.Spa.Ui",
                 OnlyThisFiles = new List<string> {
                     "package.json",
                     "Web.config",
-                    ".angular-cli.json",
                     "src\\typings.d.ts",
                     "src\\app\\app.component.css",
                     "src\\app\\app.component.html",
@@ -128,9 +128,9 @@ namespace Seed.Gen
                ConfigExternarResourcesTemplatesBackDDD(replaceLocalFilesApplication),
                ConfigExternarResourcesFrameworkCommon(replaceLocalFilesApplication),
                ConfigExternarResourcesTemplatesFrontBs4Angular20(replaceLocalFilesApplication),
-               ConfigExternarResourcesFrameworkAngula20Crud(replaceLocalFilesApplication),
+               ConfigExternarResourcesFrameworkAngula60Crud(replaceLocalFilesApplication),
                ConfigExternarResourcesSeedLayoutBs4Angular60(replaceLocalFilesApplication),
-               ConfigExternarResourcesSeedLayoutBs4Angular20OnlyThisFiles(replaceLocalFilesApplication)
+               ConfigExternarResourcesSeedLayoutBs4Angular60OnlyThisFiles(replaceLocalFilesApplication)
 
             };
 
