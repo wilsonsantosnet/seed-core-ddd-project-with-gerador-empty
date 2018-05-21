@@ -203,7 +203,7 @@ namespace Seed.Gen
             var replaceLocalFilesApplication = true;
 
             if (this.Stack == "V2.0")
-                return StackV10(replaceLocalFilesApplication);
+                return StackV20(replaceLocalFilesApplication);
 
             return StackV10(replaceLocalFilesApplication);
 
