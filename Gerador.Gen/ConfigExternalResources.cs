@@ -149,8 +149,8 @@ namespace Seed.Gen
                 OnlyThisFiles = new List<string> {
                     "package.json",
                     "Web.config",
-					"angular.json",
-                    "src\\typings.d.ts",
+		    "angular.json",
+                    //"src\\typings.d.ts",
                     "src\\app\\app.component.css",
                     "src\\app\\app.component.html",
                     "src\\app\\app.component.ts",
