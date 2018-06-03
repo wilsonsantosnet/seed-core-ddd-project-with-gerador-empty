@@ -15,6 +15,8 @@ Seed vazio para projetos  SPA / DDD / Gerador
 
 5-) instalar .net core LTM 1.1.X [https://www.microsoft.com/net/download/windows]
 
+5.1-) Downloads [ https://github.com/dotnet/core/blob/master/release-notes/download-archives/1.1.2-download.md ]
+
 5.1-) instalar SDK installer [https://www.microsoft.com/net/download/thank-you/dotnet-sdk-1.1.7-windows-x64-installer]
 
 
